@@ -1,0 +1,78 @@
+/* ========= General Reset ========= */
+.item-interactive {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: #fff;
+  color: #1e293b; /* slate-800 */
+  border-radius: 0.75rem;
+  font-weight: 500;
+  box-shadow: 0 0 0 transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition:
+    background 0.2s cubic-bezier(.4,0,.2,1),
+    box-shadow 0.23s cubic-bezier(.4,0,.2,1),
+    transform 0.22s cubic-bezier(.4,0,.2,1),
+    color 0.22s cubic-bezier(.4,0,.2,1);
+}
+
+/* ========= Hover, Focus & Active State Animations ========= */
+.item-interactive:hover,
+.item-interactive:focus-visible {
+  background: #e0f2fe;    /* Light blue background on hover */
+  box-shadow: 0 10px 44px -10px #0ea5e914, 0 1.5px 7px 0 #0001;
+  color: #0ea5e9;         /* Change text color to blue-500 */
+  transform: scale(1.045);
+}
+
+.item-interactive:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 8px -2px #0ea5e914, 0 1px 3px 0 #0001;
+}
+
+/* ========= Icon Color Change On Hover ========= */
+.item-interactive .icon {
+  transition: color 0.22s cubic-bezier(.4,0,.2,1), transform 0.25s;
+}
+
+.item-interactive:hover .icon,
+.item-interactive:focus-visible .icon {
+  color: #0ea5e9;      /* Tailwind blue-500 */
+}
+
+/* ========= Icon Animation On Hover (optional) ========= */
+.item-interactive:hover .icon-animate {
+  animation: wiggle 0.5s;
+}
+@keyframes wiggle {
+  0%   { transform: rotate(0deg);}
+  20%  { transform: rotate(-12deg);}
+  50%  { transform: rotate(9deg);}
+  60%  { transform: rotate(-6deg);}
+  80%  { transform: rotate(4deg);}
+  100% { transform: rotate(0deg);}
+}
+
+/* ========= Shadow Card Animations ========= */
+.shadow-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px 0 #0284c720;
+  transition:
+    box-shadow 0.23s cubic-bezier(.4,0,.2,1),
+    transform 0.21s cubic-bezier(.4,0,.2,1);
+}
+.shadow-card:hover,
+.shadow-card:focus-within {
+  box-shadow: 0 10px 44px -10px #0ea5e914, 0 1.5px 7px 0 #0001;
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* ========= Accessibility (focus style) ========= */
+.item-interactive:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 1.5px;
+}
