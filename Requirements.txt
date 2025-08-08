@@ -1,0 +1,26 @@
+Python modules to install via pip
+First create an Anaconda environment with numpy , pandas ,matplotlib (essentials for data science) and apply in environment.
+
+You should install these Python packages in your virtual environment:
+
+flask
+
+flask_cors
+
+transformers
+
+gtts
+
+opencv-python
+
+mediapipe
+
+numpy
+
+scikit-learn
+
+sentencepiece (Required by MarianTokenizer)
+
+torch (PyTorch backend required by Transformer models)
+
+pickle (built-in, no need to install)
